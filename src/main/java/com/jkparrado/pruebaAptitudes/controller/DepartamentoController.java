@@ -1,5 +1,6 @@
 package com.jkparrado.pruebaAptitudes.controller;
 
+import com.jkparrado.pruebaAptitudes.model.Ciudad;
 import com.jkparrado.pruebaAptitudes.model.Departamento;
 import com.jkparrado.pruebaAptitudes.service.DepartamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,8 @@ public class DepartamentoController {
         return departamentoService.findAll();
     }
 
-    @PostMapping("/findById")
-    public Departamento findById(@RequestBody Long id) {
+    @PostMapping("/findById/{id}")
+    public Departamento findById(@PathVariable Long id) {
         return departamentoService.findById(id);
     }
 
@@ -34,13 +35,15 @@ public class DepartamentoController {
         return departamentoService.agregar(departamento);
     }
 
-    @DeleteMapping("/eliminar")
-    public boolean eliminar(@RequestBody Departamento departamento) {
-        return departamentoService.eliminar(departamento.getIddepartamento());
+    @DeleteMapping("/eliminar/{id}")
+    public boolean eliminar(@PathVariable Long id) {
+        return departamentoService.eliminar(id);
     }
 
     @PutMapping("/editar")
     public boolean editar(@RequestBody Departamento departamento) {
         return departamentoService.editar(departamento);
     }
+
+
 }

@@ -1,10 +1,13 @@
 package com.jkparrado.pruebaAptitudes.service;
 
+import com.jkparrado.pruebaAptitudes.model.Ciudad;
 import com.jkparrado.pruebaAptitudes.model.Departamento;
+import com.jkparrado.pruebaAptitudes.repository.CiudadRepository;
 import com.jkparrado.pruebaAptitudes.repository.DepartamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +16,9 @@ public class DepartamentoService {
 
     @Autowired
     private DepartamentoRepository departamentoRepository;
+
+    @Autowired
+    private CiudadRepository ciudadRepository;
 
     public List<Departamento> findAll() {
         return departamentoRepository.findAll();
@@ -44,4 +50,6 @@ public class DepartamentoService {
             return false;
         }
     }
+
+
 }

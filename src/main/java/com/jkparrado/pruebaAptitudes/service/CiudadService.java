@@ -45,5 +45,8 @@ public class CiudadService {
         }
     }
 
+    public List<Ciudad> listarCiudadPorRegion(Long idRegion) {
+        return ciudadRepository.findByDepartamento_Iddepartamento(idRegion);
+    }
 
 }

@@ -24,8 +24,8 @@ public class CiudadController {
         return ciudadService.findAll();
     }
 
-    @PostMapping("/findById")
-    public Ciudad findById(@RequestBody Long id) {
+    @PostMapping("/findById/{id}")
+    public Ciudad findById(@PathVariable Long id) {
         return ciudadService.findById(id);
     }
 
@@ -34,8 +34,8 @@ public class CiudadController {
         return ciudadService.agregar(ciudad);
     }
 
-    @DeleteMapping("/eliminar")
-    public boolean eliminar(@RequestBody Long id) {
+    @DeleteMapping("/eliminar/{id}")
+    public boolean eliminar(@PathVariable Long id) {
         return ciudadService.eliminar(id);
     }
 
@@ -43,5 +43,12 @@ public class CiudadController {
     public boolean editar(@RequestBody Ciudad ciudad) {
         return ciudadService.editar(ciudad);
     }
+
+    @PostMapping("/listarCiudadPorRegion/{idRegion}")
+    public List<Ciudad> listarCiudadPorRegion (@PathVariable Long idRegion){
+        return ciudadService.listarCiudadPorRegion(idRegion);
+    }
+
+
 }
 
