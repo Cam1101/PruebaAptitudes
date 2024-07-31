@@ -42,7 +42,7 @@ Para ejecutar este proyecto, necesitas tener instaladas las siguientes tecnolog�
 
 ## Configuración
 
-Asegurate de modificar el archivo **application.propperties** en el directorio **resources** para que la información de la base de datos sea coherente con tu base de datos:
+Una vez clonado el repositorio, asegurate de modificar el archivo **application.propperties** en el directorio **resources** para que la información de la base de datos sea coherente con tu base de datos:
 
 spring.application.name=pruebaAptitudes
 
