@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Departamentos y Ciudades</title>
+</head>
+<body>
+<h2>Seleccionar Departamento</h2>
+<form th:action="@{/departamentos}" method="get">
+    <select name="departamentoId">
+        <option th:each="departamento : ${departamentos}"
+                th:value="${departamento.iddepartamento}"
+                th:text="${departamento.nombreDepartamento}">Departamento</option>
+    </select>
+    <button type="submit">Buscar</button>
+</form>
+
+<div th:if="${ciudades != null}">
+    <h2>Ciudades</h2>
+    <ul>
+        <li th:each="ciudad : ${ciudades}"
+            th:text="${ciudad.nombreCiudad + ' (Habitantes: ' + ciudad.numHabitantes + ')'}">Ciudad</li>
+    </ul>
+</div>
+</body>
+</html>
