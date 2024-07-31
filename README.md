@@ -48,9 +48,9 @@ spring.application.name=pruebaAptitudes
 
 spring.datasource.url=jdbc:mysql://localhost:3306/aptitudes  //Asegurate de revisar el puerto
 
-spring.datasource.username=<USUARIO>
+spring.datasource.username=<**USUARIO**>
 
-spring.datasource.password=<CONTRASEÑA>
+spring.datasource.password=<**CONTRASEÑA**>
 
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
@@ -60,3 +60,7 @@ spring.jpa.show-sql=true
 
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
+## Pantalla:
+
+Para acceder a la pantalla, correr el proyecto y dirigirse a la url: 
+**localhost:8080/departamentos**
