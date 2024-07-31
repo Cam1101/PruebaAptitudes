@@ -30,7 +30,7 @@ Este proyecto es una aplicación Spring Boot que maneja información de departam
 Para ejecutar este proyecto, necesitas tener instaladas las siguientes tecnologías en tu máquina:
 
 1. **Java Development Kit (JDK) 17**
-   - Puedes descargarlo desde: https://www.oracle.com/java/technologies/javase-jdk17-downloads.html
+   - Puedes descargarlo desde: https://www.oracle.com/co/java/technologies/downloads/
 
 2. **Apache Maven**
    - Puedes descargarlo desde: https://maven.apache.org/download.cgi
@@ -45,11 +45,18 @@ Para ejecutar este proyecto, necesitas tener instaladas las siguientes tecnolog�
 Asegurate de modificar el archivo **application.propperties** en el directorio **resources** para que la información de la base de datos sea coherente con tu base de datos:
 
 spring.application.name=pruebaAptitudes
+
 spring.datasource.url=jdbc:mysql://localhost:3306/aptitudes  //Asegurate de revisar el puerto
+
 spring.datasource.username=<USUARIO>
+
 spring.datasource.password=<CONTRASEÑA>
+
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
+
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
